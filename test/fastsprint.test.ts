@@ -16,7 +16,7 @@ describe('FastSprint accounts', () => {
     it('should query by email', async () => {
         const accounts: FastSpringPageResponse = await fastSprint
             .accounts()
-            .query({email: 'hwangzhiming@qq.com'})
+            .query({email: 'hwangzhiming@gmail.com'})
             .get();
         assert(accounts);
     });

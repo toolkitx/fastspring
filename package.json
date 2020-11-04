@@ -1,6 +1,6 @@
 {
   "name": "@toolkitx/fastspring",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,10 @@
   },
   "scripts": {
     "test": "mocha --require ts-node/register --timeout 20000 test/*.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "prelib:publish": "npm run lib:update-version",
+    "lib:update-version": "npm version patch",
+    "lib:publish": "npm publish --access=public"
   },
   "author": "toolkitx.net",
   "repository": {

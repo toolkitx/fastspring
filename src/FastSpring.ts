@@ -1,7 +1,7 @@
 import {FastSpringRequest} from "./FastSpringRequest";
 
 export class FastSpring {
-    host = 'https://api.fastspring.com'
+    private host = 'https://api.fastspring.com'
 
     constructor(private username: string, private password) {
     }

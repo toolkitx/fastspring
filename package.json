@@ -1,6 +1,6 @@
 {
   "name": "@toolkitx/fastspring",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,8 @@
     "build": "tsc",
     "prelib:publish": "npm run lib:update-version && npm run build",
     "lib:update-version": "npm version patch",
-    "lib:publish": "npm publish --access=public"
+    "lib:publish": "npm publish --access=public",
+    "lib:unpublish": "npm unpublish @toolkitx/fastspring@0.0.4"
   },
   "author": "toolkitx.net",
   "repository": {

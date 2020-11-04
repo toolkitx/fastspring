@@ -11,30 +11,32 @@ npm install @toolkitx/fastspring
 ```
 
 ## Example
-
-Get accounts
-
+Get instance
 ```ts
 import {FastSpring, FastSpringPageResponse} from '@toolkitx/fastspring';
-
 const fastSprint = new FastSpring('YOUR_USER_NAME', 'YOUR_PASSWORD');
+```
+
+* Get accounts
+
+```ts
 const accounts: FastSpringPageResponse = await fastSprint.accounts().get();
 ```
 
-Get single account
+* Get single account
 
 ```ts
 const account = await fastSprint.accounts('ACCOUNT_ID').get();
 ```
 
 
-Query accounts
+* Query accounts
 
 ```ts
 const accounts = await fastSprint.accounts().query({email: 'EXAMPLE@EMAIL'}).get();
 ```
 
-Create Session
+* Create Session
 ```ts
 const payload = {
     account: 'YOUR_ACCOUNT_ID',

@@ -36,6 +36,11 @@ export class FastSpringRequest {
         return this.send();
     }
 
+    delete() {
+        this.requestConfig.method = 'DELETE';
+        return this.send();
+    }
+
     post(body: any) {
         this.requestConfig.method = 'POST';
         this.requestConfig.data = body;

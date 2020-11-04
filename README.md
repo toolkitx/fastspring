@@ -16,6 +16,15 @@ Get instance
 import {FastSpring, FastSpringPageResponse} from '@toolkitx/fastspring';
 const fastSprint = new FastSpring('YOUR_USER_NAME', 'YOUR_PASSWORD');
 ```
+Chain
+```ts
+fastSprint
+.api('URL')
+.head(key, value)
+.query({key: 'value'})
+.get()
+// or .post(payload)
+```
 
 * Get accounts
 
@@ -49,3 +58,10 @@ const payload = {
 };
 const session = await fastSprint.sessions().post(payload);
 ```
+
+## Custom Request
+```ts
+await fastSprint.api('RELATE_URL').get();
+await fastSprint.api('RELATE_URL').post(payload);;
+```
+
